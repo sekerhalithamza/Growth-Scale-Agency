@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  width: 100%;
+  height: map-get($sizes, header-height);
+  padding-inline: 30rem;
+  align-items: center;
+  justify-content: space-between;
+
+  &--logo {
+    height: 50%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &-item {
+      font-size: map-get($font-sizes, m);
+    }
+  }
+
+  &--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    svg {
+      fill: map-get($colors, text);
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+  }
+}

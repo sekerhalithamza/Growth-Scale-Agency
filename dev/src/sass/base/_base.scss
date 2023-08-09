@@ -21,3 +21,12 @@ body {
   background-color: map-get($colors, background);
   color: map-get($colors, text);
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: map-get($colors, text);
+}
