@@ -31,6 +31,10 @@ a {
   color: map-get($colors, text);
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
