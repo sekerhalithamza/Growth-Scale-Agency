@@ -30,3 +30,7 @@ a {
   text-decoration: none;
   color: map-get($colors, text);
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

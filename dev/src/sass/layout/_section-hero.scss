@@ -1,0 +1,53 @@
+.section-hero {
+  width: 100%;
+  height: 95vh;
+  padding-block-start: map-get($sizes, header-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 30rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &--slogan {
+    background-image: linear-gradient(
+      to right,
+      map-get($colors, primary),
+      map-get($colors, accent)
+    );
+    background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: map-get($font-sizes, heading-1);
+    font-weight: map-get($font-weights, semi-bold);
+    width: 50%;
+    line-height: 110%;
+  }
+
+  &--text {
+    font-size: map-get($font-sizes, m);
+    width: 50%;
+    color: map-get($colors, text-secondary);
+  }
+
+  &--btn {
+    width: fit-content;
+    background-color: map-get($colors, text);
+    color: map-get($colors, background);
+    padding: 1.5rem;
+    border-radius: 1.1rem;
+    font-size: map-get($font-sizes, m);
+    font-weight: map-get($font-weights, medium);
+    transition: all 400ms ease;
+
+    &:hover {
+      transform: translateY(-10%);
+    }
+  }
+}
