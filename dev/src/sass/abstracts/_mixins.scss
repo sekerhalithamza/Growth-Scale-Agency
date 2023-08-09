@@ -1,0 +1,10 @@
+@mixin breakpoint($value) {
+  $my-map: map-get($breakpoints, $value);
+  @if $my-map {
+    @media (#{$my-map}) {
+      @content;
+    }
+  } @else {
+    @error "Opps, seems like the breakpoint #{$user-value} ins't definde yet";
+  }
+}
