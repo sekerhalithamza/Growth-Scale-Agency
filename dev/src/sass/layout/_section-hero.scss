@@ -17,8 +17,8 @@
   &--slogan {
     background-image: linear-gradient(
       to right,
-      map-get($colors, primary),
-      map-get($colors, accent)
+      map-get($colors, accent),
+      map-get($colors, primary)
     );
     background-clip: text;
     -moz-background-clip: text;

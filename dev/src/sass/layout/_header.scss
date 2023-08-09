@@ -18,8 +18,13 @@
     align-items: center;
     gap: 2rem;
 
-    &-item {
+    &-item a {
       font-size: map-get($font-sizes, m);
+      transition: all 400ms ease;
+
+      &:hover {
+        color: map-get($colors, primary);
+      }
     }
   }
 
