@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -8,6 +8,16 @@
   padding-inline: 30rem;
   align-items: center;
   justify-content: space-between;
+  background-color: rgba(map-get($colors, secondary), 0);
+  transition: all 300ms ease;
+
+  &.middle {
+    background-color: rgba(map-get($colors, secondary), 1);
+  }
+
+  &.closed {
+    top: calc(map-get($sizes, header-height) * -1);
+  }
 
   &--logo {
     height: 50%;
