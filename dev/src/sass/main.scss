@@ -1,0 +1,16 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/base";
+
+@import "components/btns";
+
+@import "layout/header";
+@import "layout/section-hero";
+@import "layout/section-about";
+@import "layout/section-services";
+@import "layout/section-testimonials";
+@import "layout/footer";
+
+@import "pages/home";
+@import "pages/blogs";

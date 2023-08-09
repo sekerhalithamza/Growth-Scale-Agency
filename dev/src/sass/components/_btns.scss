@@ -1,0 +1,27 @@
+.btn-primary {
+  background-color: map-get($colors, secondary);
+  color: map-get($colors, text);
+  padding: 1.5rem;
+  font-weight: map-get($font-weights, semi-bold);
+  font-size: map-get($font-sizes, base);
+  border: 0.5rem map-get($colors, primary) solid;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-color: map-get($colors, primary);
+  }
+}
+
+.btn-secondary {
+  background-color: map-get($colors, accent);
+  color: map-get($colors, text);
+  padding: 1.2rem;
+  font-size: map-get($font-sizes, base);
+  font-weight: map-get($font-weights, medium);
+  border-radius: 0.5rem;
+  transition: all 300ms ease;
+
+  &:hover {
+    background-color: map-get($colors, primary);
+  }
+}
