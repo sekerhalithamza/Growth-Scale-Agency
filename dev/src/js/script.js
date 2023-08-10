@@ -9,18 +9,22 @@ console.log(header.getBoundingClientRect().height);
 
 console.log(firstElement.getBoundingClientRect().bottom);
 
-const headerAnimation = setInterval(() => {
+window.onscroll = () => {
   if (
     header.getBoundingClientRect().height < window.scrollY &&
-    firstElement.getBoundingClientRect().bottom > window.scrollY
+    firstElement.getBoundingClientRect().height - header.getBoundingClientRect().height >
+      window.scrollY
   ) {
     header.classList.remove("closed");
     header.classList.add("middle");
-  } else if (firstElement.getBoundingClientRect().bottom < window.scrollY) {
+  } else if (
+    firstElement.getBoundingClientRect().height - header.getBoundingClientRect().height <
+    window.scrollY
+  ) {
     header.classList.add("closed");
     header.classList.remove("middle");
   } else {
     header.classList.remove("closed");
     header.classList.remove("middle");
   }
-}, 100);
+};
