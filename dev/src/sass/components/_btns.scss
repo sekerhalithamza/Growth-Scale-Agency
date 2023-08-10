@@ -6,6 +6,8 @@
   font-size: map-get($font-sizes, base);
   border: 0.5rem map-get($colors, primary) solid;
   transition: all 300ms ease;
+  width: fit-content;
+  height: fit-content;
 
   &:hover {
     background-color: map-get($colors, primary);

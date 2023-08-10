@@ -1,0 +1,35 @@
+.section-about {
+  display: flex;
+  padding-inline: 15rem;
+  gap: 10rem;
+  background-color: map-get($colors, secondary);
+  align-items: center;
+  padding-block: 5rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &--title {
+      display: flex;
+      flex-direction: column;
+      span {
+        font-size: map-get($font-sizes, m);
+        color: map-get($colors, primary);
+        font-style: italic;
+        font-weight: map-get($font-weights, medium);
+      }
+      font-size: map-get($font-sizes, heading-2);
+      font-weight: map-get($font-weights, semi-bold);
+      width: 70%;
+      line-height: 100%;
+    }
+  }
+
+  &--img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+  }
+}
