@@ -1,0 +1,42 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 8rem;
+  width: 100%;
+  align-items: center;
+  padding-inline: 2rem;
+  background-color: map-get($colors, secondary);
+  padding-block: 1rem;
+
+  &--logo {
+    height: 80%;
+    width: auto;
+  }
+
+  &__list {
+    display: flex;
+    gap: 2rem;
+
+    &--item {
+      height: fit-content;
+      width: fit-content;
+
+      a {
+        height: 3.2rem;
+        width: 3.2rem;
+
+        svg {
+          width: 3.2rem;
+          height: 3.2rem;
+          fill: map-get($colors, text);
+          transition: all 300ms ease;
+
+          &:hover {
+            fill: map-get($colors, primary);
+          }
+        }
+      }
+    }
+  }
+}
