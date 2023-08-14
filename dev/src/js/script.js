@@ -2,12 +2,7 @@
 
 const header = document.getElementById("header");
 const firstElement = document.getElementsByClassName("first-element")[0];
-
-console.log(window.scrollY);
-
-console.log(header.getBoundingClientRect().height);
-
-console.log(firstElement.getBoundingClientRect().bottom);
+const progressCircles = document.getElementsByClassName("progress-circle");
 
 window.onscroll = () => {
   if (
@@ -26,5 +21,11 @@ window.onscroll = () => {
   } else {
     header.classList.remove("closed");
     header.classList.remove("middle");
+  }
+
+  for (const element of progressCircles) {
+    if (element.getBoundingClientRect().bottom + 10 < window.innerHeight) {
+      element.classList.add("active");
+    }
   }
 };

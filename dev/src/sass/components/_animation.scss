@@ -1,0 +1,153 @@
+.progress-circle {
+  display: flex;
+  border-radius: 50%;
+  background: conic-gradient(map-get($colors, primary) 0deg, map-get($colors, text-secondary) 0deg);
+  font-size: 0;
+}
+
+.progress-circle.active {
+  animation: turn_in 1s ease;
+  background: conic-gradient(
+    map-get($colors, primary) var(--progress),
+    map-get($colors, text-secondary) 0deg
+  );
+}
+
+.progress-circle::after {
+  content: attr(data-progress);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem;
+  border-radius: 50%;
+  background: map-get($colors, background);
+  text-align: center;
+}
+
+@keyframes turn_in {
+  0% {
+    background: conic-gradient(map-get($colors, text-secondary) 0deg);
+  }
+
+  5% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.1),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  10% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.15),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  15% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.2),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  20% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.25),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  25% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.3),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  30% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.35),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  35% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.4),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  40% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.45),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  45% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.5),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  50% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.55),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  55% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.6),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  60% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.65),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  65% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.7),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  70% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.7),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  75% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.75),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  80% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.8),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  85% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.85),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  90% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.9),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  95% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 0.95),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+  100% {
+    background: conic-gradient(
+      map-get($colors, primary) calc(var(--progress) * 1),
+      map-get($colors, text-secondary) 0deg
+    );
+  }
+}

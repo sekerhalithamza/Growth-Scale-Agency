@@ -37,6 +37,7 @@
       align-items: center;
       text-align: center;
       padding-block: 15%;
+      padding-inline: 10%;
 
       .icon {
         width: 8rem;
@@ -84,6 +85,28 @@
           z-index: -1;
         }
       }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    &--circle {
+      width: 15rem;
+      height: 15rem;
+
+      &::after {
+        font-size: map-get($font-sizes, xl);
+        font-weight: map-get($font-weights, semi-bold);
+      }
+    }
+
+    &--text {
+      font-size: map-get($font-sizes, m);
     }
   }
 }

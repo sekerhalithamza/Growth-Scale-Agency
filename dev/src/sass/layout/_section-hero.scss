@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   padding-inline: 30rem;
+  gap: 2rem;
 
   &__container {
     display: flex;
@@ -26,13 +27,13 @@
     color: transparent;
     font-size: map-get($font-sizes, heading-1);
     font-weight: map-get($font-weights, semi-bold);
-    width: 50%;
+    width: 90%;
     line-height: 110%;
   }
 
   &--text {
     font-size: map-get($font-sizes, m);
-    width: 50%;
+    width: 90%;
     color: map-get($colors, text-secondary);
   }
 
@@ -49,5 +50,10 @@
     &:hover {
       transform: translateY(-10%);
     }
+  }
+
+  lottie-player {
+    width: 100%;
+    height: auto;
   }
 }
