@@ -3,6 +3,10 @@
 const header = document.getElementById("header");
 const firstElement = document.getElementsByClassName("first-element")[0];
 const progressCircles = document.getElementsByClassName("progress-circle");
+const chevronBtns = document.getElementsByClassName("section-testimonials__wrapper-btn");
+const testimonialsContainers = document.getElementsByClassName(
+  "section-testimonials__wrapper-container"
+);
 
 window.onscroll = () => {
   if (
@@ -29,3 +33,35 @@ window.onscroll = () => {
     }
   }
 };
+
+var position = 0;
+
+chevronBtns[0].addEventListener("click", () => {
+  console.log("click");
+  if (position > 0) {
+    position--;
+    for (const container of testimonialsContainers) {
+      container.style.transform = `translateX(calc(${position} * -24vw))`;
+    }
+  } else {
+    position = 1;
+    for (const container of testimonialsContainers) {
+      container.style.transform = `translateX(calc(${position} * -24vw))`;
+    }
+  }
+});
+
+chevronBtns[1].addEventListener("click", () => {
+  console.log("click");
+  if (position < 1) {
+    position++;
+    for (const container of testimonialsContainers) {
+      container.style.transform = `translateX(calc(${position} * -24vw))`;
+    }
+  } else {
+    position = 0;
+    for (const container of testimonialsContainers) {
+      container.style.transform = `translateX(calc(${position} * -24vw))`;
+    }
+  }
+});
