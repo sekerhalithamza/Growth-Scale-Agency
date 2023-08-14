@@ -7,6 +7,9 @@ const chevronBtns = document.getElementsByClassName("section-testimonials__wrapp
 const testimonialsContainers = document.getElementsByClassName(
   "section-testimonials__wrapper-container"
 );
+const questioncsContainers = document.getElementsByClassName(
+  "section-questions__wrapper-container"
+);
 
 window.onscroll = () => {
   if (
@@ -72,3 +75,11 @@ setInterval(() => {
 }, 5000);
 
 */
+
+for (const container of questioncsContainers) {
+  container
+    .getElementsByClassName("section-questions__wrapper-container-top")[0]
+    .addEventListener("click", () => {
+      container.classList.toggle("active");
+    });
+}
