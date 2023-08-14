@@ -10,6 +10,7 @@
   justify-content: space-between;
   background-color: rgba(map-get($colors, secondary), 0);
   transition: all 300ms ease;
+  z-index: 5;
 
   &.middle {
     background-color: rgba(map-get($colors, secondary), 1);
@@ -26,7 +27,7 @@
   &__list {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem;
 
     &-item a {
       font-size: map-get($font-sizes, m);

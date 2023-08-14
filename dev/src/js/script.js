@@ -52,7 +52,6 @@ chevronBtns[0].addEventListener("click", () => {
 });
 
 chevronBtns[1].addEventListener("click", () => {
-  console.log("click");
   if (position < 1) {
     position++;
     for (const container of testimonialsContainers) {
@@ -65,3 +64,11 @@ chevronBtns[1].addEventListener("click", () => {
     }
   }
 });
+
+/*
+
+setInterval(() => {
+  chevronBtns[1].click();
+}, 5000);
+
+*/
